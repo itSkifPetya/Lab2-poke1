@@ -18,6 +18,7 @@ public class CalmMind extends StatusMove {
 
     @Override
     protected String describe() {
-        return "Calm Mind!";
+        String[] pieces = this.getClass().toString().split("\\.");
+        return "does " + pieces[pieces.length-1];
     }
 }

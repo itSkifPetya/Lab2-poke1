@@ -1,9 +1,6 @@
 package move;
 
-import ru.ifmo.se.pokemon.Effect;
-import ru.ifmo.se.pokemon.Pokemon;
-import ru.ifmo.se.pokemon.SpecialMove;
-import ru.ifmo.se.pokemon.Type;
+import ru.ifmo.se.pokemon.*;
 
 public class AirSlash extends SpecialMove {
     public AirSlash(Type type, double pow, double acc) {
@@ -13,5 +10,16 @@ public class AirSlash extends SpecialMove {
     @Override
     protected void applyOppEffects(Pokemon pokemon) {
         super.applyOppEffects(pokemon);
+        if (pokemon.getCondition() != Status.NORMAL && Math.random() < 0.3) {
+            // Дописать шанс выпадения флинча
+            Effect.flinch(pokemon);
+        }
     }
+
+    @Override
+    protected String describe() {
+        String[] pieces = this.getClass().toString().split("\\.");
+        return "does " + pieces[pieces.length-1];
+    }
+
 }

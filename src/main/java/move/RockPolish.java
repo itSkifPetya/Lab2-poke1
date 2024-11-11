@@ -18,6 +18,7 @@ public class RockPolish extends StatusMove {
 
     @Override
     protected String describe() {
-        return "Rock Polish!";
+        String[] pieces = this.getClass().toString().split("\\.");
+        return "does " + pieces[pieces.length-1];
     }
 }

@@ -14,6 +14,7 @@ public class Moonblast extends SpecialMove {
 
     @Override
     protected String describe() {
-        return "Moonblast!";
+        String[] pieces = this.getClass().toString().split("\\.");
+        return "does " + pieces[pieces.length-1];
     }
 }
