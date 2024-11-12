@@ -12,8 +12,8 @@ public class Cleffa extends Pokemon {
         setType(Type.FAIRY);
         setStats(50, 25, 28, 45, 55, 15);
 
-        ThunderWave thunderWave = new ThunderWave();
-        DreamEater dreamEater = new DreamEater(Type.PSYCHIC, 100, 100);
+        ThunderWave thunderWave = new ThunderWave(); // DONE
+        DreamEater dreamEater = new DreamEater(Type.PSYCHIC, 100, 100); // 70%
         setMove(thunderWave, dreamEater);
     }
 }

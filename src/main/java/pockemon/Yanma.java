@@ -14,7 +14,7 @@ public class Yanma extends Pokemon {
 
         Psychic psychic = new Psychic(Type.PSYCHIC, 90, 100); // DONE
         BugBuzz bugBuzz = new BugBuzz(Type.BUG, 90, 100); // DONE
-        AirSlash airSlash = new AirSlash(Type.FLYING, 75, 95); // 80%
+        AirSlash airSlash = new AirSlash(Type.FLYING, 75, 95); // DONE
         setMove(psychic, bugBuzz, airSlash);
 
     }

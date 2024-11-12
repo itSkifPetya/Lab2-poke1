@@ -11,7 +11,6 @@ public class AirSlash extends SpecialMove {
     protected void applyOppEffects(Pokemon pokemon) {
         super.applyOppEffects(pokemon);
         if (pokemon.getCondition() != Status.NORMAL && Math.random() < 0.3) {
-            // Дописать шанс выпадения флинча
             Effect.flinch(pokemon);
         }
     }
@@ -19,7 +18,7 @@ public class AirSlash extends SpecialMove {
     @Override
     protected String describe() {
         String[] pieces = this.getClass().toString().split("\\.");
-        return "does " + pieces[pieces.length-1];
+        return "does " + pieces[pieces.length - 1];
     }
 
 }
