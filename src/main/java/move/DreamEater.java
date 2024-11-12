@@ -1,30 +1,33 @@
 package move;
 
-import ru.ifmo.se.pokemon.Pokemon;
-import ru.ifmo.se.pokemon.SpecialMove;
-import ru.ifmo.se.pokemon.Status;
-import ru.ifmo.se.pokemon.Type;
+import ru.ifmo.se.pokemon.*;
 
 public final class DreamEater extends SpecialMove {
     public DreamEater(Type type, double pow, double acc) {
         super(type, pow, acc);
     }
 
+
+    double dealedDamage;
+
     @Override
     protected void applyOppDamage(Pokemon pokemon, double v) {
+        dealedDamage = 0;
         if (pokemon.getCondition() == Status.SLEEP) {
-            super.applyOppDamage(pokemon, v);
-        } else {
-            super.applyOppDamage(pokemon, 0);
+            pokemon.setMod(Stat.HP, (int) Math.round(v));
+            dealedDamage = Math.round(v);
         }
     }
 
-
+    @Override
+    protected void applySelfDamage(Pokemon pokemon, double v) {
+        pokemon.setMod(Stat.HP, (int) (-0.5 * dealedDamage));
+    }
 
     @Override
     protected String describe() {
         String[] pieces = this.getClass().toString().split("\\.");
-        return "does " + pieces[pieces.length-1];
+        return "does " + pieces[pieces.length - 1];
     }
 
 }
