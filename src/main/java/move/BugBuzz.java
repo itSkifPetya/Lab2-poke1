@@ -2,7 +2,7 @@ package move;
 
 import ru.ifmo.se.pokemon.*;
 
-public class BugBuzz extends SpecialMove {
+public final class BugBuzz extends SpecialMove {
     public BugBuzz(Type type, double pow, double acc) {
         super(type, pow, acc);
     }

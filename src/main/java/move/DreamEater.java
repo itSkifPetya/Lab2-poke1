@@ -5,7 +5,7 @@ import ru.ifmo.se.pokemon.SpecialMove;
 import ru.ifmo.se.pokemon.Status;
 import ru.ifmo.se.pokemon.Type;
 
-public class DreamEater extends SpecialMove {
+public final class DreamEater extends SpecialMove {
     public DreamEater(Type type, double pow, double acc) {
         super(type, pow, acc);
     }

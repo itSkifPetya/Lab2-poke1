@@ -4,10 +4,9 @@ import ru.ifmo.se.pokemon.Pokemon;
 import ru.ifmo.se.pokemon.Stat;
 import ru.ifmo.se.pokemon.StatusMove;
 
-public class RockPolish extends StatusMove {
-
+public final class RockPolish extends StatusMove {
     public RockPolish() {
-
+        super();
     }
 
     @Override

@@ -2,7 +2,7 @@ package move;
 
 import ru.ifmo.se.pokemon.*;
 
-public class AirSlash extends SpecialMove {
+public final class AirSlash extends SpecialMove {
     public AirSlash(Type type, double pow, double acc) {
         super(type, pow, acc);
     }

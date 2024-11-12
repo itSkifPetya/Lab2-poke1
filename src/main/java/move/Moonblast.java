@@ -2,7 +2,7 @@ package move;
 
 import ru.ifmo.se.pokemon.*;
 
-public class Moonblast extends SpecialMove {
+public final class Moonblast extends SpecialMove {
     public Moonblast(Type type, double pow, double acc) { super(type, pow, acc); }
 
     @Override

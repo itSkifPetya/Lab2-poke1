@@ -3,7 +3,7 @@ package move;
 
 import ru.ifmo.se.pokemon.*;
 
-public class Bulldoze extends PhysicalMove {
+public final class Bulldoze extends PhysicalMove {
 
     public Bulldoze(Type type, double pow, double acc) {
         super(type, pow, acc);

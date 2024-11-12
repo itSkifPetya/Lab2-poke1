@@ -7,7 +7,7 @@ import move.RockPolish;
 import ru.ifmo.se.pokemon.*;
 
 
-public class Lunatone extends Pokemon {
+public final class Lunatone extends Pokemon {
     public Lunatone(String name, int lvl) {
         super(name, lvl);
         setType(Type.ROCK, Type.PSYCHIC);

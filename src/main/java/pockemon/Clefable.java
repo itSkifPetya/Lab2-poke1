@@ -2,7 +2,7 @@ package pockemon;
 
 import move.WorkUp;
 
-public class Clefable extends Clefairy {
+public final class Clefable extends Clefairy {
     public Clefable(String name, int lvl) {
         super(name, lvl);
         setStats(95, 70, 73, 95, 90, 60);

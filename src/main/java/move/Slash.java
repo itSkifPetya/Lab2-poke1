@@ -4,7 +4,7 @@ import ru.ifmo.se.pokemon.PhysicalMove;
 import ru.ifmo.se.pokemon.Pokemon;
 import ru.ifmo.se.pokemon.Type;
 
-public class Slash extends PhysicalMove {
+public final class Slash extends PhysicalMove {
     public Slash(Type type, double pow, double acc) {
         super(type, pow, acc);
     }
